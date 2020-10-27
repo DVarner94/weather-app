@@ -9,6 +9,9 @@ const weather = new Weather(weatherLocation.city, weatherLocation.country)
 // init ui
 const ui = new UI()
 
+// get weather when dom loads
+document.addEventListener('DOMContentLoaded', getWeather)
+
 weather.getWeather()
     .then(results => {
         console.log(results);
